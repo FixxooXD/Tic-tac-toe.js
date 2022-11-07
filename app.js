@@ -117,6 +117,8 @@ div8.addEventListener("click", () => {
   winningLogic();
 });
 
+let WinningFlag = false;
+
 function winningLogic() {
   // first "-----"" line streak
   if (
@@ -124,64 +126,120 @@ function winningLogic() {
     div0.innerText == div1.innerText &&
     div1.innerText == div2.innerText
   ) {
-    console.log("yes");
+    if(div0.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }
   }
   // second "-----" line streak
   if (
     div3.innerText !== "" &&
     div3.innerText == div4.innerText &&
     div4.innerText == div5.innerText
-  ) {
-    console.log("yes");
-  }
+  )  if(div3.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }
   // third "-----" line streak
   if (
     div6.innerText !== "" &&
     div6.innerText == div7.innerText &&
     div7.innerText == div8.innerText
-  ) {
-    console.log("yes");
-  }
+  )  if(div6.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }
   // first Vertical line streak
   if (
     div0.innerText !== "" &&
     div0.innerText == div3.innerText &&
     div3.innerText == div6.innerText
-  ) {
-    console.log("yes");
-  }
+  )  if(div0.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }
   // second Vertical line streak
   if (
     div1.innerText !== "" &&
     div1.innerText == div4.innerText &&
     div4.innerText == div7.innerText
-  ) {
-    console.log("yes");
-  }
+  )  if(div1.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }
   // Third Vertical line streak
   if (
     div2.innerText !== "" &&
     div2.innerText == div5.innerText &&
     div5.innerText == div8.innerText
-  ) {
-    console.log("yes");
-  }
+  )  if(div2.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+    }
   //Digonal(left to Right) Winning Streak
   if (
     div0.innerText !== "" &&
     div0.innerText == div4.innerText &&
     div4.innerText == div8.innerText
-  ) {
-    console.log("yes");
-  }
+  )  if(div0.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }
   //Digonal(Right to Left) Winning Streak
   if (
     div2.innerText !== "" &&
     div2.innerText == div4.innerText &&
     div4.innerText == div6.innerText
-  ) {
-    console.log("yes");
-  } else {
+  )  if(div0.innerText == "X"){
+    console.log("X's wins");
+    WinningFlag = true;
+    console.log(WinningFlag)
+    }
+    else{
+      console.log("O's Wins")
+      WinningFlag = true;
+      console.log(WinningFlag)
+    }else {
     if (
       div0.innerText !== "" &&
       div2.innerText !== "" &&
@@ -190,9 +248,27 @@ function winningLogic() {
       div5.innerText !== "" &&
       div6.innerText !== "" &&
       div7.innerText !== "" &&
-      div8.innerText !== ""
+      div8.innerText !== "" &&
+      WinningFlag === true
+      // console.log(WinningFlag)
     ) {
-      console.log("oppssss");
+      console.log("Restart");
+    }
+   else if(
+      div0.innerText !== "" &&
+      div1.innerText !== "" &&
+      div2.innerText !== "" &&
+      div3.innerText !== "" &&
+      div4.innerText !== "" &&
+      div5.innerText !== "" &&
+      div6.innerText !== "" &&
+      div7.innerText !== "" &&
+      div8.innerText !== "" &&
+      winningLogic === false
+    ){
+      // console.log('niche')
+      console.log("Its a Tie")
+      console.log('Restart')
     }
   }
 }
