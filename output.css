@@ -518,21 +518,6 @@ video {
   position: relative;
 }
 
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
-.mx-1 {
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
-}
-
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -562,6 +547,10 @@ video {
   display: grid;
 }
 
+.h-36 {
+  height: 9rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -573,6 +562,10 @@ video {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-36 {
+  width: 9rem;
 }
 
 .w-32 {
