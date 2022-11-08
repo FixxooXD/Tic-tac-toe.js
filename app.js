@@ -7,6 +7,8 @@ const div5 = document.getElementById("div5");
 const div6 = document.getElementById("div6");
 const div7 = document.getElementById("div7");
 const div8 = document.getElementById("div8");
+const msgBox = document.getElementById("msgBox");
+const WinningMsg = document.getElementById('winningMsg');
 
 let counter = 1;
 div0.addEventListener("click", () => {
@@ -128,12 +130,14 @@ function winningLogic() {
   ) {
     if (div0.innerText == "X") {
       console.log("X's wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     } else {
       console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     }
   }
   // second "-----" line streak
@@ -143,13 +147,14 @@ function winningLogic() {
     div4.innerText == div5.innerText
   )
     if (div3.innerText == "X") {
-      console.log("X's wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     } else {
       console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     }
   // third "-----" line streak
   if (
@@ -158,13 +163,14 @@ function winningLogic() {
     div7.innerText == div8.innerText
   )
     if (div6.innerText == "X") {
-      console.log("X's wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     } else {
       console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     }
   // first Vertical line streak
   if (
@@ -173,13 +179,17 @@ function winningLogic() {
     div3.innerText == div6.innerText
   )
     if (div0.innerText == "X") {
-      console.log("X's wins");
+
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
+
     } else {
       console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
+
     }
   // second Vertical line streak
   if (
@@ -188,13 +198,16 @@ function winningLogic() {
     div4.innerText == div7.innerText
   )
     if (div1.innerText == "X") {
-      console.log("X's wins");
+
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
+
     } else {
       console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     }
   // Third Vertical line streak
   if (
@@ -203,10 +216,12 @@ function winningLogic() {
     div5.innerText == div8.innerText
   )
     if (div2.innerText == "X") {
-      console.log("X's wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
     } else {
-      console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
     }
   //Digonal(left to Right) Winning Streak
@@ -216,13 +231,14 @@ function winningLogic() {
     div4.innerText == div8.innerText
   )
     if (div0.innerText == "X") {
-      console.log("X's wins");
       WinningFlag = true;
-      console.log(WinningFlag);
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
+
     } else {
-      console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     }
   //Digonal(Right to Left) Winning Streak
   if (
@@ -230,14 +246,17 @@ function winningLogic() {
     div2.innerText == div4.innerText &&
     div4.innerText == div6.innerText
   )
-    if (div0.innerText == "X") {
+    if (div2.innerText == "X") {
       console.log("X's wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
+
     } else {
       console.log("O's Wins");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-      console.log(WinningFlag);
     }
   else {
     if (
@@ -267,8 +286,12 @@ function winningLogic() {
       WinningFlag == false
     ) {
       // console.log('niche')
-      console.log("Its a Tie");
-      console.log("Restart");
+      msgBox.style.display = "block";
+      WinningMsg.innerText = "It's a Tie";
     }
   }
+}
+
+function restart(){
+  window.location.reload();
 }
