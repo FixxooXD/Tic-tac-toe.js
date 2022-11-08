@@ -200,6 +200,7 @@ function winningLogic() {
     if (div1.innerText == "X") {
 
       msgBox.style.display = "block";
+      msgBox.style.display = "flex"
       WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
 
