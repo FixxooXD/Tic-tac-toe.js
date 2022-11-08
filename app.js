@@ -8,7 +8,7 @@ const div6 = document.getElementById("div6");
 const div7 = document.getElementById("div7");
 const div8 = document.getElementById("div8");
 const msgBox = document.getElementById("msgBox");
-const WinningMsg = document.getElementById('winningMsg');
+const WinningMsg = document.getElementById("winningMsg");
 
 let counter = 1;
 div0.addEventListener("click", () => {
@@ -179,17 +179,14 @@ function winningLogic() {
     div3.innerText == div6.innerText
   )
     if (div0.innerText == "X") {
-
       msgBox.style.display = "block";
       WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-
     } else {
       console.log("O's Wins");
       msgBox.style.display = "block";
       WinningMsg.innerText = "O's Wins";
       WinningFlag = true;
-
     }
   // second Vertical line streak
   if (
@@ -198,12 +195,10 @@ function winningLogic() {
     div4.innerText == div7.innerText
   )
     if (div1.innerText == "X") {
-
       msgBox.style.display = "block";
-      msgBox.style.display = "flex"
+      msgBox.style.display = "flex";
       WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-
     } else {
       console.log("O's Wins");
       msgBox.style.display = "block";
@@ -235,7 +230,6 @@ function winningLogic() {
       WinningFlag = true;
       msgBox.style.display = "block";
       WinningMsg.innerText = "X's Wins";
-
     } else {
       msgBox.style.display = "block";
       WinningMsg.innerText = "O's Wins";
@@ -252,7 +246,6 @@ function winningLogic() {
       msgBox.style.display = "block";
       WinningMsg.innerText = "X's Wins";
       WinningFlag = true;
-
     } else {
       console.log("O's Wins");
       msgBox.style.display = "block";
@@ -293,6 +286,6 @@ function winningLogic() {
   }
 }
 
-function restart(){
+function restart() {
   window.location.reload();
 }
